@@ -1,0 +1,23 @@
+<h1>Result</h1>
+
+<h3>Your guessed word was:</br> <%= @score %></h3>
+
+<h4><%= @message %></h4>
+
+<p>Your result is: <%= @final_score  %></p>
+
+<p><%= @spelling_message  %></p>
+
+
+<%if @final_score == true %>
+    <%=   "Congratulations! #{@score} is a valid English word!" %>
+    <%  elsif @final_score == false %>
+      <%=  "Sorry, but #{@score} does not seem to be a valid word" %>
+    <%  elsif @final_score.blank? %>
+     <%=   "That's nothing, you dumbass!" %>
+  <%  end  %>
+
+
+<p><a href="/new">Play again</a></p>
+
+
